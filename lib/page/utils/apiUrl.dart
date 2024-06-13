@@ -6,6 +6,5 @@ class ApiUrl {
   }
 
   ApiUrl._internal();
-
-  String baseUrl = "http://192.30.35.59/apiEcomerse/";
+  String baseUrl = "http://192.30.35.93/ecommerce/";
 }

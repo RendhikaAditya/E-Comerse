@@ -24,9 +24,9 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    _futureProductClothing = getProduct("Pakaian");
-    _futureProductAccessories = getProduct("Aksesoris");
-    _futureProductOuter = getProduct("Outer");
+    _futureProductClothing = getProduct("Clothing");
+      _futureProductAccessories = getProduct("Accessories");
+    _futureProductOuter = getProduct("Footwear");
   }
 
   String formatRupiah(String angkaStr) {
@@ -208,7 +208,7 @@ class _HomePageState extends State<HomePage> {
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 image: DecorationImage(
-                                  image: NetworkImage("${ApiUrl().baseUrl}image/${item.foto.toString()}"),
+                                  image: NetworkImage("${ApiUrl().baseUrl}uploads/${item.foto.toString()}"),
                                   fit: BoxFit.cover,
                                 ),
                               ),

@@ -7,6 +7,7 @@ class Assets {
   static const String ecomerseImageWelcome2 = 'image/welcome2.png';
   static const String ecomerseImageWelcome3 = 'image/welcome3.png';
   static const String imageGoogle = 'image/google.png';
+  static const String imageIcProfile = 'image/ic_profile.png';
   static const String imageIcVerify = 'image/ic_verify.png';
   static const String imageWelcome1 = 'image/welcome1.png';
   static const String imageWelcome2 = 'image/welcome2.png';

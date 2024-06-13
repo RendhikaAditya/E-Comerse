@@ -110,7 +110,7 @@ class _PageCartState extends State<PageCart> {
 
   Future<List<Datum>?> getCart() async {
     try {
-      http.Response res = await http.get(Uri.parse('${ApiUrl().baseUrl}chartsGET.php?id=${sessionManager.idUser}'));
+      http.Response res = await http.get(Uri.parse('${ApiUrl().baseUrl}chartsGET.php?id_user=${sessionManager.idUser}'));
 
       var productResponse = modelCartFromJson(res.body);
 
@@ -182,7 +182,7 @@ class _PageCartState extends State<PageCart> {
                                 SizedBox(width: 10),
                                 ClipRRect(
                                   borderRadius: BorderRadius.all(Radius.circular(10)),
-                                  child: Image.network("${ApiUrl().baseUrl}image/${data.foto}", width: 120, height: 120),
+                                  child: Image.network("${ApiUrl().baseUrl}uploads/${data.foto}", width: 120, height: 120),
                                 ),
                                 SizedBox(width: 16),
                                 Column(

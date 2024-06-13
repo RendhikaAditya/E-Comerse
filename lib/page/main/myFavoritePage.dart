@@ -2,7 +2,6 @@ import 'package:ecomerse/page/utils/sesionManager.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-
 import '../../model/modelMyFavorite.dart';
 import '../utils/apiUrl.dart';
 
@@ -65,7 +64,7 @@ class _MyFavoritePageState extends State<MyFavoritePage> {
       return null;
     }
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -108,6 +107,7 @@ class _MyFavoritePageState extends State<MyFavoritePage> {
             );
           } else {
             return Container(
+              margin: EdgeInsets.symmetric(horizontal: 20),
               height: double.infinity,
               width: double.infinity,
               child: ListView.builder(
@@ -146,7 +146,7 @@ class _MyFavoritePageState extends State<MyFavoritePage> {
                                 bottomLeft: Radius.circular(10),
                               ),
                               image: DecorationImage(
-                                image: NetworkImage("${ApiUrl().baseUrl}image/${item.foto.toString()}"),
+                                image: NetworkImage("${ApiUrl().baseUrl}uploads/${item.foto.toString()}"),
                                 fit: BoxFit.cover,
                               ),
                             ),

@@ -208,7 +208,7 @@ class _DetailProductPageState extends State<DetailProductPage> {
               ClipRRect(
                 borderRadius: BorderRadius.all(Radius.circular(10)),
                 child: Image.network(
-                  "${ApiUrl().baseUrl}image/${product.foto}",
+                  "${ApiUrl().baseUrl}uploads/${product.foto}",
                   fit: BoxFit.cover,
                   height: 350,
                   width: double.infinity,

@@ -63,7 +63,11 @@ class _RegisterPageState extends State<RegisterPage> {
           ));
           setState(() {
             isLoading = false;
-            Navigator.pop(context);
+            Navigator.pushAndRemoveUntil(
+              context,
+              MaterialPageRoute(builder: (context) => VerificationPage(email : txtEmail.text.toString())),
+                  (route) => false,
+            );
           });
         }
       } catch (e) {
